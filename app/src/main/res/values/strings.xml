@@ -8,9 +8,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_contact">CONTACT PAGE</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_contact">Contact</string>
     <string name="menu_viewPager">VIEW PAGER</string>S
-    <string name="label_contact">MAIN PAGE</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

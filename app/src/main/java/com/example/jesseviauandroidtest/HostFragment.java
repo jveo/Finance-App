@@ -80,7 +80,13 @@ public class HostFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             //switch position
-            return null;
+            switch (position){
+                case 0: return ViewPagerFragment.newInstance("Intents", "phone,email and text intents");
+                case 1: return ViewPagerFragment.newInstance("Viewpager", "created view pager with dynamic text");
+                case 2: return ViewPagerFragment.newInstance("Navigation Bar", "created navigation side bar");
+                case 3: return ViewPagerFragment.newInstance("Location", "Created a location link to long/lat");
+                default: return ViewPagerFragment.newInstance("404", "project not found");
+            }
         }
 
         @Override
