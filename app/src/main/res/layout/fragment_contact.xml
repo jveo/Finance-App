@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ContactFragment">
 
+<<<<<<< Updated upstream
 
     <TextView
         android:id="@+id/textView"
@@ -16,6 +17,9 @@
 
 
 
+=======
+
+>>>>>>> Stashed changes
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="255dp"
@@ -111,6 +115,7 @@
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:text="@string/textButton" />
+
     </LinearLayout>
 
     <LinearLayout
