@@ -7,11 +7,16 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.jesseviauandroidtest.HomeFragment"
-        android:label="@string/menu_contact"
+        android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_contact"
         android:name="com.example.jesseviauandroidtest.ContactFragment"
         android:label="@string/menu_contact"
         tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/nav_viewpager"
+        android:name="com.example.jesseviauandroidtest.HostFragment"
+        android:label="@string/menu_viewPager"
+        tools:layout="@layout/fragment_host" />
 </navigation>

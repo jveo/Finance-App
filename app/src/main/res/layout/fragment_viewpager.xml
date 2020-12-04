@@ -5,4 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ViewPagerFragment"/>
+    tools:context=".ViewPagerFragment">
+
+    <TextView
+        android:id="@+id/viewpagerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment"
+        android:textAlignment="center"
+        android:textSize="45sp" />
+</LinearLayout>

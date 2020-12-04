@@ -65,7 +65,7 @@ public class HostFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_host, container, false);
         CustomerViewPagerAdapter adapter = new CustomerViewPagerAdapter(getChildFragmentManager());
-        ViewPager viewPager = view.findViewById(R.id.galleryContent);
+        ViewPager viewPager = view.findViewById(R.id.hostContent);
         viewPager.setAdapter(adapter);
         return view;
     }
@@ -81,11 +81,11 @@ public class HostFragment extends Fragment {
         public Fragment getItem(int position) {
             //switch position
             switch (position){
-                case 0: return ViewPagerFragment.newInstance("Intents", "phone,email and text intents");
-                case 1: return ViewPagerFragment.newInstance("Viewpager", "created view pager with dynamic text");
-                case 2: return ViewPagerFragment.newInstance("Navigation Bar", "created navigation side bar");
-                case 3: return ViewPagerFragment.newInstance("Location", "Created a location link to long/lat");
-                default: return ViewPagerFragment.newInstance("404", "project not found");
+                case 0: return ViewPagerFragment.newInstance("phone,email and text intents");
+                case 1: return ViewPagerFragment.newInstance("created view pager with dynamic text");
+                case 2: return ViewPagerFragment.newInstance("created navigation side bar");
+                case 3: return ViewPagerFragment.newInstance("Created a location link to long/lat");
+                default: return ViewPagerFragment.newInstance("project not found");
             }
         }
 
