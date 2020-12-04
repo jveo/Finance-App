@@ -8,10 +8,32 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+<<<<<<< Updated upstream
     <string name="menu_contact">CONTACT PAGE</string>
+=======
+    //MENUS
+    <string name="menu_home">Home</string>
+    <string name="menu_contact">Contact</string>
+>>>>>>> Stashed changes
     <string name="menu_viewPager">VIEW PAGER</string>S
     <string name="label_contact">MAIN PAGE</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //CONTACT PAGE
+    <string name="contactButton">CONTACT</string>
+    <string name="reportABug">REPORT A BUG</string>
+
+    //COMPANY NAME
+    <string name="company_title">FinancialEd</string>
+
+    //PERSONAL INFORMATION
+    <string name="name">Jesse Viau</string>
+    <string name="email">FinancialEd@gmail.com</string>
+    <string name="phoneButton">PHONE</string>
+    <string name="emailButton">EMAIL</string>
+    <string name="textButton">TEXT</string>
+    <string name="locationButton">LOCATION</string>
+
+    <string name="hello_blank_fragment">hello_blank_fragment</string>
 
 </resources>

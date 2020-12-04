@@ -66,6 +66,84 @@ public class ContactFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
 
+        // all necessary variables to hold all the buttons
+        Button emailButton = view.findViewById(R.id.emailButton);
+        Button phoneButton = view.findViewById(R.id.phoneButton);
+        Button textButton = view.findViewById(R.id.textButton);
+        Button locationButton = view.findViewById(R.id.locationButton);
+
+        //PHONE button event listener
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri phoneNumber = Uri.parse("tel:226-111-1111");
+                Intent intent = new Intent(Intent.ACTION_DIAL, phoneNumber);
+                if(intent.resolveActivity(getActivity().getPackageManager())!= null){
+                    startActivity(intent);
+                } else {
+                    //toast warning
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        //EMAIL button event listener
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] emailAddresses = {"jesse.viau92@stclairconnect.ca",};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, emailAddresses);
+                intent.putExtra(Intent.EXTRA_CC, "finaid@gmail.com");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Meeting Request");
+
+                if(intent.resolveActivity(getActivity().getPackageManager())!= null){
+                    startActivity(intent);
+                } else {
+                    //toast warning
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+        //TEXT button even listener
+        textButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri phoneNumber = Uri.parse("tel:226-111-1111");
+                Intent intent  = new Intent(Intent.ACTION_SENDTO, phoneNumber);
+                intent.setData(Uri.parse("smsto:"));
+                intent.putExtra("sms_body", "Hey Jesse!\n");
+
+                if(intent.resolveActivity(getActivity().getPackageManager())!= null){
+                    startActivity(intent);
+                } else {
+                    //toast warning
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        //LOCATION button event listener
+        locationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //parse the URI for the location
+                Uri locationUri = Uri.parse("geo:0,0?42.24867,-83.0209258,3a,75y,133.4h,90t");
+                Intent intent = new Intent(Intent.ACTION_VIEW, locationUri);
+
+                //fail safe IF the packageManager doesn't exist
+                if(intent.resolveActivity(getActivity().getPackageManager())!= null){
+                    startActivity(intent);
+                } else {
+                    //toast warning
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         return view;
     }
 }
