@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".ContactFragment">
 
-<<<<<<< Updated upstream
 
     <TextView
         android:id="@+id/textView"
@@ -17,9 +16,12 @@
 
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> development
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="255dp"

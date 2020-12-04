@@ -1,6 +1,11 @@
 package com.example.jesseviauandroidtest;
 
 import android.Manifest;
+<<<<<<< HEAD
+=======
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+>>>>>>> development
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -129,7 +134,20 @@ public class ContactFragment extends Fragment {
                 if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
                     Log.d("FinancialEd-error", "NO PERMISSION");
                     if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.SEND_SMS)){
+<<<<<<< HEAD
                         Log.d("FinancialEd-error", "Should show rationale");
+=======
+                        final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        alertDialog.setTitle("SMS Permission");
+                        alertDialog.setMessage("We need access to SMS to send a messages");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                alertDialog.dismiss();
+                                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_SEND_SMS);
+                            }
+                        });
+>>>>>>> development
                     } else {
                         ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_SEND_SMS);
                     }
