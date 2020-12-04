@@ -1,11 +1,18 @@
 package com.example.jesseviauandroidtest;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +31,7 @@ public class ContactFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    public static final int PERMISSION_SEND_SMS = 0;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -112,16 +120,42 @@ public class ContactFragment extends Fragment {
         textButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri phoneNumber = Uri.parse("tel:226-111-1111");
-                Intent intent  = new Intent(Intent.ACTION_SENDTO, phoneNumber);
-                intent.setData(Uri.parse("smsto:"));
-                intent.putExtra("sms_body", "Hey Jesse!\n");
 
-                if(intent.resolveActivity(getActivity().getPackageManager())!= null){
-                    startActivity(intent);
+                /**
+                 * checks to see if we don't have permission
+                 *
+                 * then checks if we asked for the permission before
+                 *
+                 * Requests permission
+                 */
+                if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
+                    Log.d("FinancialEd-error", "NO PERMISSION");
+                    if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.SEND_SMS)){
+                        final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        alertDialog.setTitle("SMS Permission");
+                        alertDialog.setMessage("We need access to SMS to send a messages");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                alertDialog.dismiss();
+                                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_SEND_SMS);
+                            }
+                        });
+                    } else {
+                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_SEND_SMS);
+                    }
                 } else {
-                    //toast warning
-                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_LONG).show();
+                    Uri phoneNumber = Uri.parse("tel:226-111-1111");
+                    Intent intent  = new Intent(Intent.ACTION_SENDTO, phoneNumber);
+                    intent.setData(Uri.parse("smsto:"));
+                    intent.putExtra("sms_body", "Hi FinancialEd!\n");
+
+                    if(intent.resolveActivity(getActivity().getPackageManager())!= null){
+                        startActivity(intent);
+                    } else {
+                        //toast warning
+                        Toast.makeText(getContext(), "No app installed", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });

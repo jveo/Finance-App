@@ -8,16 +8,13 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-<<<<<<< Updated upstream
-    <string name="menu_contact">CONTACT PAGE</string>
-=======
-    //MENUS
+
+    //MENU
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact</string>
->>>>>>> Stashed changes
+
     <string name="menu_viewPager">VIEW PAGER</string>S
     <string name="label_contact">MAIN PAGE</string>
-
 
     //CONTACT PAGE
     <string name="contactButton">CONTACT</string>

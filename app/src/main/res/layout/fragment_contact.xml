@@ -7,12 +7,10 @@
     android:orientation="vertical"
     tools:context=".ContactFragment">
 
-<<<<<<< Updated upstream
 
 
 
 
-=======
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="255dp"
@@ -131,7 +129,6 @@
             android:background="@color/colorPrimary"
             android:text="@string/locationButton" />
     </LinearLayout>
->>>>>>> Stashed changes
 
 
 </LinearLayout>

@@ -1,13 +1,18 @@
 package com.example.jesseviauandroidtest;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -59,5 +64,27 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode){
+            case ContactFragment.PERMISSION_SEND_SMS:
+                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Uri phoneNumber = Uri.parse("tel:226-111-1111");
+                    Intent intent  = new Intent(Intent.ACTION_SENDTO, phoneNumber);
+                    intent.setData(Uri.parse("smsto:"));
+                    intent.putExtra("sms_body", "Hi FinancialEd!\n");
+
+                    if(intent.resolveActivity(getPackageManager())!= null){
+                        startActivity(intent);
+                    }
+                }
+                break;
+        }
+
+
     }
 }
