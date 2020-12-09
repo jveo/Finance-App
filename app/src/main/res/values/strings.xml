@@ -8,16 +8,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    //MENU
-=======
-    //MENUS
->>>>>>> Stashed changes
-=======
 
     //MENU
->>>>>>> development
+
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact</string>
 
@@ -37,6 +30,18 @@
     <string name="emailButton">EMAIL</string>
     <string name="textButton">TEXT</string>
     <string name="locationButton">LOCATION</string>
+
+    //FAQ QUESTIONS
+    <string name="faq0">What’s a Credit Score?</string>
+    <string name="faq1">What Is a 401(k)?</string>
+    <string name="faq2">What Is an IRA?</string>
+    <string name="faq3">What Does Investing Mean?</string>
+    <string name="faq4">What Is ‘Good Debt’?</string>
+    <string name="faq5">How Much Should I Put in an Emergency Fund?</string>
+    <string name="faq6">What Is a Budget? Do I Need One?</string>
+    <string name="faq7">How Much Do I Need for Retirement?</string>
+    <string name="faq8">How Many Credit Cards Should I Have?</string>
+    <string name="faq9">What Is APR? How Do Interest Rates Work?</string>
 
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 

@@ -1,11 +1,10 @@
-package com.example.jesseviauandroidtest;
+package com.example.jesseviauandroidtest.fragments;
 
 import android.Manifest;
-<<<<<<< HEAD
-=======
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
->>>>>>> development
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -21,6 +20,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.jesseviauandroidtest.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -75,7 +76,6 @@ public class ContactFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
-
 
         // all necessary variables to hold all the buttons
         Button emailButton = view.findViewById(R.id.emailButton);
@@ -134,9 +134,9 @@ public class ContactFragment extends Fragment {
                 if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
                     Log.d("FinancialEd-error", "NO PERMISSION");
                     if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.SEND_SMS)){
-<<<<<<< HEAD
+
                         Log.d("FinancialEd-error", "Should show rationale");
-=======
+
                         final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
                         alertDialog.setTitle("SMS Permission");
                         alertDialog.setMessage("We need access to SMS to send a messages");
@@ -147,7 +147,7 @@ public class ContactFragment extends Fragment {
                                 ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_SEND_SMS);
                             }
                         });
->>>>>>> development
+
                     } else {
                         ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_SEND_SMS);
                     }

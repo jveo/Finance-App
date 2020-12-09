@@ -1,4 +1,4 @@
-package com.example.jesseviauandroidtest;
+package com.example.jesseviauandroidtest.fragments;
 
 import android.os.Bundle;
 
@@ -11,6 +11,9 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.jesseviauandroidtest.R;
+import com.example.jesseviauandroidtest.helperfragments.ViewPagerFragment;
 
 /**
  * A simple {@link Fragment} subclass.
