@@ -19,4 +19,9 @@
         android:name="com.example.jesseviauandroidtest.fragments.HostFragment"
         android:label="@string/menu_viewPager"
         tools:layout="@layout/fragment_host" />
+    <fragment
+        android:id="@+id/listViewFragment"
+        android:name="com.example.jesseviauandroidtest.fragments.listViewFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_list_view" />
 </navigation>

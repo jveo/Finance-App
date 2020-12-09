@@ -9,12 +9,11 @@
     <string name="action_settings">Settings</string>
 
 
-    //MENU
-
+    //MENU LABELS
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact</string>
-
-    <string name="menu_viewPager">VIEW PAGER</string>S
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_viewPager">VIEW PAGER</string>
 
     //CONTACT PAGE
     <string name="contactButton">CONTACT</string>
@@ -41,7 +40,8 @@
     <string name="faq6">What Is a Budget? Do I Need One?</string>
     <string name="faq7">How Much Do I Need for Retirement?</string>
     <string name="faq8">How Many Credit Cards Should I Have?</string>
-    <string name="faq9">What Is APR? How Do Interest Rates Work?</string>
+    <string name="faq9">What Is APR? How Do Interest Rates Work?</string>\
+    <string name="ListViewDefaultText">Choose an Frequently Asked Question!</string>
 
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 
