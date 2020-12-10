@@ -3,10 +3,13 @@ package com.example.jesseviauandroidtest.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.jesseviauandroidtest.MainActivity;
 import com.example.jesseviauandroidtest.R;
@@ -62,8 +65,32 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        final View view = inflater.inflate(R.layout.fragment_home, container, false);
         MainActivity.fab.hide();
+
+
+        final FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+
+        Button incomeTaxButton = view.findViewById(R.id.incomeTaxButton);
+        incomeTaxButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_nav_home_to_incomeTaxCalculatorFragment);
+
+                fragmentManager.beginTransaction().setCustomAnimations(R.anim.animate_in, R.anim.animate_out, R.anim.animate_back_in, R.anim.animate_back_out);
+            }
+        });
+
+
+        Button emiButton = view.findViewById(R.id.emiButton);
+        emiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_nav_home_to_emiCalculatorFragment);
+            }
+        });
         return view;
     }
 }

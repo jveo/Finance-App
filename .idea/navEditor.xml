@@ -20,6 +20,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="emiCalculatorFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="572" />
+                            <option name="y" value="852" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="financeTerminologyFragment">
                     <value>
                       <LayoutPositions>
@@ -74,11 +86,16 @@
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="292" />
-                            <option name="y" value="432" />
+                            <option name="y" value="485" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_nav_home_to_emiCalculatorFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_nav_home_to_incomeTaxCalculatorFragment">
                               <value>
                                 <LayoutPositions />

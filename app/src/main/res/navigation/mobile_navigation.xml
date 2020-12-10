@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_nav_home_to_incomeTaxCalculatorFragment"
             app:destination="@id/incomeTaxCalculatorFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_emiCalculatorFragment"
+            app:destination="@id/emiCalculatorFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_contact"
@@ -41,6 +44,11 @@
     <fragment
         android:id="@+id/incomeTaxCalculatorFragment"
         android:name="com.example.jesseviauandroidtest.fragments.IncomeTaxCalculatorFragment"
-        android:label="fragment_income_tax_calculator"
+        android:label="@string/incomeTax_calc"
         tools:layout="@layout/fragment_income_tax_calculator" />
+    <fragment
+        android:id="@+id/emiCalculatorFragment"
+        android:name="com.example.jesseviauandroidtest.fragments.EmiCalculatorFragment"
+        android:label="@string/menu_emi"
+        tools:layout="@layout/fragment_emi_calculator" />
 </navigation>

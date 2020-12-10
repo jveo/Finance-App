@@ -18,11 +18,15 @@
     <string name="menu_terms">Finance Terms</string>
     <string name="menu_credits">Credits</string>
     <string name="menu_tools">Tools</string>
+    <string name="menu_emi">Equated monthly installment</string>
 
     //BUTTON TEXT
     <string name="incomeTax_calc">Income Tax Calculator</string>
     <string name="Emi_calc">EMI Calculator</string>
 
+    //input field text
+    <string name="incomeTax_year">Tax Year</string>
+    <string name="incomeTax_input">Your Income</string>
 
     //CONTACT PAGE
     <string name="contactButton">CONTACT</string>
@@ -57,7 +61,10 @@
     <string name="credit_logo">This image was pulled from <a href="https://pixabay.com/illustrations/f-letter-alphabet-alphabetically-1015534/">Here</a></string>
 
     <string name="title_calculateButton">Take Home Pay Button</string>
-    <string name="credit_calculate">This image was used from <a href="https://pixabay.com/illustrations/calculator-numbers-0-1-2-3-4-5-2374442/">Here</a></string>
+    <string name="credit_calculate">This image was used from <a href="https://laws.com/uploads/cms/20110817/4e4c15fbec35d.jpg">Here</a></string>
+
+    <string name="title_emiButton">Take Home Pay Button</string>
+    <string name="emi_calculate">This image was used from <a href="https://www.cashry.com/blog/wp-content/uploads/2019/07/monthly-installment-payday-loans-1.jpg">Here</a></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
