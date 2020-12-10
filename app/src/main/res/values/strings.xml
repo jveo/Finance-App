@@ -19,6 +19,10 @@
     <string name="menu_credits">Credits</string>
     <string name="menu_tools">Tools</string>
 
+    //BUTTON TEXT
+    <string name="incomeTax_calc">Income Tax Calculator</string>
+    <string name="Emi_calc">EMI Calculator</string>
+
 
     //CONTACT PAGE
     <string name="contactButton">CONTACT</string>
@@ -48,6 +52,12 @@
     <string name="faq9">What Is APR? How Do Interest Rates Work?</string>\
     <string name="ListViewDefaultText">Choose an Frequently Asked Question!</string>
 
-    <string name="hello_blank_fragment">hello_blank_fragment</string>
+    //CREDITS
+    <string name="title_applogo">App Logo</string>
+    <string name="credit_logo">This image was pulled from <a href="https://pixabay.com/illustrations/f-letter-alphabet-alphabetically-1015534/">Here</a></string>
 
+    <string name="title_calculateButton">Take Home Pay Button</string>
+    <string name="credit_calculate">This image was used from <a href="https://pixabay.com/illustrations/calculator-numbers-0-1-2-3-4-5-2374442/">Here</a></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

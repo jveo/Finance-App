@@ -8,7 +8,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.jesseviauandroidtest.fragments.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_incomeTaxCalculatorFragment"
+            app:destination="@id/incomeTaxCalculatorFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_contact"
         android:name="com.example.jesseviauandroidtest.fragments.ContactFragment"
@@ -32,6 +36,11 @@
     <fragment
         android:id="@+id/creditsFragment"
         android:name="com.example.jesseviauandroidtest.fragments.creditsFragment"
-        android:label="fragment_credits"
+        android:label="@string/menu_credits"
         tools:layout="@layout/fragment_credits" />
+    <fragment
+        android:id="@+id/incomeTaxCalculatorFragment"
+        android:name="com.example.jesseviauandroidtest.fragments.IncomeTaxCalculatorFragment"
+        android:label="fragment_income_tax_calculator"
+        tools:layout="@layout/fragment_income_tax_calculator" />
 </navigation>
