@@ -7,6 +7,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="madeBy">Made by Jesse Viau</string>
 
 
     //MENU LABELS
@@ -15,6 +16,9 @@
     <string name="menu_faq">FAQ</string>
     <string name="menu_viewPager">VIEW PAGER</string>
     <string name="menu_terms">Finance Terms</string>
+    <string name="menu_credits">Credits</string>
+    <string name="menu_tools">Tools</string>
+
 
     //CONTACT PAGE
     <string name="contactButton">CONTACT</string>

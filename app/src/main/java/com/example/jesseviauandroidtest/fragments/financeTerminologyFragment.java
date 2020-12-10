@@ -76,7 +76,7 @@ public class financeTerminologyFragment extends Fragment {
         Terms.add(new Term("Net income", "This refers to a company’s total earnings or profit."));
         Terms.add(new Term("Depreciation", "loses some of that value in increments over time"));
         Terms.add(new Term("Accounts Payable", "This represents your small business’s obligations to pay debts owed to lenders, suppliers, and creditors."));
-        Terms.add(new Term("Net income", "This means the money owed to your small business by others for goods or services rendered."));
+        Terms.add(new Term("Accounts Receivable", "This means the money owed to your small business by others for goods or services rendered."));
         Terms.add(new Term("Asset(s)", " anything that has value—whether tangible or intangible—and is owned by the business is considered an asset."));
         Terms.add(new Term("BalanceSheet", "essential information that gives a “snapshot” of the company’s net worth at any given time."));
         Terms.add(new Term("Captial", "Refers to the overall wealth of a business as demonstrated by its cash accounts, assets, and investments."));

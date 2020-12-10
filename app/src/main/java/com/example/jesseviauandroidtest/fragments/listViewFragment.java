@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -75,6 +76,8 @@ public class listViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_view, container, false);
 
+
+
         final ListView listView = view.findViewById(R.id.faqList);
         answer = view.findViewById(R.id.description);
         ArrayList<listViewItem> listViewItemArrayList = new ArrayList<>();
@@ -97,6 +100,8 @@ public class listViewFragment extends Fragment {
                 );
             }
         });
+
+
         return view;
     }
 

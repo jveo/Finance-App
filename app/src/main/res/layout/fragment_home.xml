@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jesseviauandroidtest.fragments.HomeFragment">
+    android:background="@drawable/company_icon_faded"
+    android:orientation="vertical"
+    tools:context="com.example.jesseviauandroidtest.fragments.ContactFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/menu_home" />
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="263dp"
+        android:text="Button" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="22dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="17dp"
+        android:text="Button" />
+
+    <TextView
+
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#038EEC"
+        android:text="@string/madeBy"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>

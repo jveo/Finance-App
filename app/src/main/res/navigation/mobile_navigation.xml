@@ -29,4 +29,9 @@
         android:name="com.example.jesseviauandroidtest.fragments.financeTerminologyFragment"
         android:label="@string/menu_terms"
         tools:layout="@layout/fragment_finance_terminology" />
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.example.jesseviauandroidtest.fragments.creditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" />
 </navigation>

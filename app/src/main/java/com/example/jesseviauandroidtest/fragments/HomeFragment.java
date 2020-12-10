@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.jesseviauandroidtest.MainActivity;
 import com.example.jesseviauandroidtest.R;
 
 /**
@@ -62,7 +63,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
+        MainActivity.fab.hide();
         return view;
     }
 }
