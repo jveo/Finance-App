@@ -78,7 +78,8 @@ public class HomeFragment extends Fragment {
                 Navigation.findNavController(view)
                         .navigate(R.id.action_nav_home_to_incomeTaxCalculatorFragment);
 
-                fragmentManager.beginTransaction().setCustomAnimations(R.anim.animate_in, R.anim.animate_out, R.anim.animate_back_in, R.anim.animate_back_out);
+                fragmentManager.beginTransaction().setCustomAnimations(R.anim.animate_in, R.anim.animate_out, R.anim.animate_back_in, R.anim.animate_back_out)
+                        .addToBackStack(null).commit();
             }
         });
 
@@ -89,6 +90,9 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Navigation.findNavController(view)
                         .navigate(R.id.action_nav_home_to_emiCalculatorFragment);
+                fragmentManager.beginTransaction().setCustomAnimations(R.anim.animate_in, R.anim.animate_out, R.anim.animate_back_in, R.anim.animate_back_out)
+                        .addToBackStack(null).commit();
+
             }
         });
         return view;

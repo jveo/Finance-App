@@ -86,32 +86,31 @@ public class HostFragment extends Fragment {
             switch (position){
                 case 0: return ViewPagerFragment.newInstance("Step 1: Gather Your Tax Documents", "Here are a few things you need:\n" +
                         "\n" +
-                        "W-2s\n" +
-                        "1099s\n" +
-                        "Mortgage interest statements\n" +
-                        "Investment income statements");
+                        " - W-2s\n" +
+                        " - 1099s\n" +
+                        " - Mortgage interest statements\n" +
+                        " - Investment income statements", R.drawable.man1);
                 case 1: return ViewPagerFragment.newInstance("Step 2: Choose Between the Standard Deduction or Itemizing", "you have two choices: Take the standard deduction or itemize your deductions.\n If you do plan on itemizing deductions, you’ll need proof to back up your claims. So, don’t forget any receipts for deductions and tax credits like:\n" +
                         "\n" +
-                        "Childcare\n" +
-                        "Education costs\n" +
-                        "Charitable giving\n" +
-                        "Medical expenses");
+                        " - Childcare\n" +
+                        " - Education costs\n" +
+                        " - Charitable giving\n" +
+                        " - Medical expenses", R.drawable.man2);
                 case 2: return ViewPagerFragment.newInstance("Step 3: Pick a Filing Status", "Single. If you’re not married, divorced or legally separated, or widowed before the tax year, you’ll file as a single taxpayer. Simple enough, right?\n" +
                         "Married Filing Jointly. You’re married and both of you agree to file a joint return. In most cases, married couples usually save more by filing jointly.\n" +
                         "Married Filing Separately. If you’re married and for some reason don’t agree to file jointly—maybe you want to be responsible for your taxes only or filing separately results in a lower tax bill—you can use this filing status.\n" +
-                        "Head of Household. This one’s a little tricky. To qualify you must have paid for more than half of the household expenses for the year, be unmarried, and must have a “qualifying child or dependent.” So, if you’re a single parent or taking care of an ailing family member, you might qualify to file as head of household.\n" +
-                        "Qualifying widow(er). If your spouse dies and you don’t remarry in the same tax year, you can file jointly with your deceased spouse. For the two years following the year of death, you can use the qualifying widow(er) filing status if you choose to.1");
+                        "Head of Household.", R.drawable.man3);
                 case 3: return ViewPagerFragment.newInstance("Step 4: File Your Taxes", "Once you have all your documents organized, you’re ready to file your taxes!\n" +
                         "\n" +
-                        "According to the IRS, most Americans chose to hire a professional (58%) to help them file their tax returns electronically. The rest decided to file on their own using tax software or going old school and filing by paper and mailing it in.");
-                case 4: return ViewPagerFragment.newInstance("Step 5: Get Organized for Next Year", "If you end up with a big tax refund or a large tax bill, you probably want to go ahead and adjust your paycheque so that you’re not taking too much or too little out of your paycheck for taxes.");
-                default: return ViewPagerFragment.newInstance("error", "401");
+                        "According to the IRS, most Americans chose to hire a professional (58%) to help them file their tax returns electronically. The rest decided to file on their own using tax software or going old school and filing by paper and mailing it in.", R.drawable.man4);
+                case 4: return ViewPagerFragment.newInstance("Step 5: Get Organized for Next Year", "If you end up with a big tax refund or a large tax bill, you probably want to go ahead and adjust your paycheque so that you’re not taking too much or too little out of your paycheck for taxes.", R.drawable.man5);
+                default: return ViewPagerFragment.newInstance("error", "401", R.drawable.ic_baseline_error_outline_24);
             }
         }
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 }

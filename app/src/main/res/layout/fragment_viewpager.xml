@@ -19,5 +19,12 @@
         android:id="@+id/viewpagerDesc"
         android:layout_width="match_parent"
         android:layout_height="234dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/viewpagerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/man1" />
 </LinearLayout>

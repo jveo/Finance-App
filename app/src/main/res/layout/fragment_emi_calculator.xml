@@ -49,12 +49,13 @@
 
         <EditText
             android:id="@+id/LoanTermEditText"
-            android:layout_width="393dp"
-            android:layout_height="41dp"
+            android:layout_width="389dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
             android:background="#FFFFD8"
-            android:hint="Loan Term"
-            android:inputType="number" />
+            android:hint="Term (years)"
+            android:inputType="number"
+            />
 
     </LinearLayout>
 
@@ -86,7 +87,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="422dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -101,16 +102,17 @@
                 android:layout_height="47dp"
                 android:layout_weight="1"
                 android:fontFamily="monospace"
-                android:text="\tLoan Amount: "
+                android:text="Loan: "
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/LoanAmountResult"
-                android:layout_width="335dp"
+                android:layout_width="250dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
                 android:background="#FFFFD8"
+                android:hint="$"
                 android:inputType="none" />
 
         </LinearLayout>
@@ -137,6 +139,7 @@
                 android:layout_height="45dp"
                 android:layout_weight="1"
                 android:background="#FFFFD8"
+                android:hint="$"
                 android:inputType="none" />
         </LinearLayout>
 
@@ -162,6 +165,7 @@
                 android:layout_height="41dp"
                 android:layout_weight="1"
                 android:background="#FFFFD8"
+                android:hint="%"
                 android:inputType="none" />
 
         </LinearLayout>
@@ -188,6 +192,7 @@
                 android:layout_height="41dp"
                 android:layout_weight="1"
                 android:background="#FFFFD8"
+                android:hint="Months"
                 android:inputType="none" />
 
         </LinearLayout>
@@ -196,28 +201,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp">
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="198dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="monospace"
-                android:text="Total Payment:"
-                android:textAlignment="viewStart"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/totalPaymentResult"
-                android:layout_width="383dp"
-                android:layout_height="41dp"
-                android:layout_weight="1"
-                android:background="#FFFFD8"
-                android:inputType="none" />
-
-        </LinearLayout>
-
+            android:padding="10dp"/>
 
 
     </LinearLayout>

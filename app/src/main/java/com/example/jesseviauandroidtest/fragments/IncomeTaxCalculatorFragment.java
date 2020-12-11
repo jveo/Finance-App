@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.jesseviauandroidtest.MainActivity;
 import com.example.jesseviauandroidtest.R;
 
 /**
@@ -75,7 +76,7 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
+        MainActivity.fab.hide();
 
     }
 

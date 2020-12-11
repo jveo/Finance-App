@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jesseviauandroidtest.CustomRecyclerViewAdapter;
+import com.example.jesseviauandroidtest.MainActivity;
 import com.example.jesseviauandroidtest.R;
 import com.example.jesseviauandroidtest.pojo.Term;
 
@@ -63,6 +64,7 @@ public class financeTerminologyFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        MainActivity.fab.hide();
     }
 
     @Override

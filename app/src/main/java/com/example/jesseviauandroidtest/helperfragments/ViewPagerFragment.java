@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jesseviauandroidtest.R;
@@ -22,12 +23,14 @@ public class ViewPagerFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM3 = "param3";
 
 
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int mParam3;
 
 
     public ViewPagerFragment() {
@@ -43,11 +46,12 @@ public class ViewPagerFragment extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
 
-    public static ViewPagerFragment newInstance(String param1, String param2) {
+    public static ViewPagerFragment newInstance(String param1, String param2, int param3) {
         ViewPagerFragment fragment = new ViewPagerFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+        args.putInt(ARG_PARAM3, param3);
         fragment.setArguments(args);
         return fragment;
     }
@@ -58,6 +62,7 @@ public class ViewPagerFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam3 = getArguments().getInt(ARG_PARAM3);
         }
     }
 
@@ -76,6 +81,10 @@ public class ViewPagerFragment extends Fragment {
             TextView textView = view.findViewById(R.id.viewpagerDesc);
             textView.setText(mParam2);
         }
+
+            ImageView imageView = view.findViewById(R.id.viewpagerImage);
+            imageView.setImageDrawable(getContext().getDrawable(mParam3));
+
 
         return view;
     }

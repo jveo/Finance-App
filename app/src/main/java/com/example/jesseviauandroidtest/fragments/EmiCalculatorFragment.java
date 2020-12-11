@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.jesseviauandroidtest.MainActivity;
 import com.example.jesseviauandroidtest.R;
 
 /**
@@ -64,7 +65,7 @@ public class EmiCalculatorFragment extends Fragment {
 
     EditText loanAmountEditText;
     EditText InterestRateEditText;
-    EditText LoanTermEditText;
+    EditText TermEditText;
     Button emiCalculateButton;
 
     @Override
@@ -74,6 +75,7 @@ public class EmiCalculatorFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        MainActivity.fab.hide();
     }
 
     @Override
@@ -82,23 +84,36 @@ public class EmiCalculatorFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_emi_calculator, container, false);
 
-
         //User Inputs
         loanAmountEditText = (EditText) view.findViewById(R.id.loanAmountEditText);
         InterestRateEditText = (EditText) view.findViewById(R.id.InterestRateEditText);
-        LoanTermEditText = (EditText) view.findViewById(R.id.LoanTermEditText);
-
-
+        TermEditText = (EditText) view.findViewById(R.id.LoanTermEditText);
         //Result Outputs
         loanAmountResult = (TextView) view.findViewById(R.id.LoanAmountResult);
         emiResult = (TextView) view.findViewById(R.id.emiResult);
         totalInterestResult = (TextView) view.findViewById(R.id.totalInterestResult);
         termResult = (TextView) view.findViewById(R.id.termResult);
-        totalPaymentResult = (TextView) view.findViewById(R.id.totalPaymentResult);
+        //BUTTON
+        emiCalculateButton = (Button) view.findViewById(R.id.emiCalculateButton);
+        emiCalculateButton.setOnClickListener(new View.OnClickListener() {
 
 
+            @Override
+            public void onClick(View v) {
+                double loan = Integer.parseInt(loanAmountEditText.getText().toString());
+                int term = Integer.parseInt(TermEditText.getText().toString());
+                term = term*12;
+                double interest = Integer.parseInt(InterestRateEditText.getText().toString());
 
+                double totalInterestResult1 = loan*(interest/100);
+                double emiResult1 = Math.round((loan + totalInterestResult1) / term);
 
+                loanAmountResult.setText(loanAmountEditText.getText());
+                emiResult.setText(String.valueOf(emiResult1));
+                totalInterestResult.setText(String.valueOf(totalInterestResult1));
+                termResult.setText(String.valueOf(term));
+            }
+        });
 
         return view;
     }
