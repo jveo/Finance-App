@@ -14,7 +14,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_contact">Contact</string>
     <string name="menu_faq">FAQ</string>
-    <string name="menu_viewPager">VIEW PAGER</string>
+    <string name="menu_viewPager">Step By Step</string>
     <string name="menu_terms">Finance Terms</string>
     <string name="menu_credits">Credits</string>
     <string name="menu_tools">Tools</string>
@@ -43,6 +43,13 @@
     <string name="emailButton">EMAIL</string>
     <string name="textButton">TEXT</string>
     <string name="locationButton">LOCATION</string>
+
+    //STEP BY STEP
+    <string name="step1">Step 1: Gather Your Tax Documents</string>
+    <string name="step2">Step 2: Choose Between the Standard Deduction or Itemizing</string>
+    <string name="step3">Step 3: Pick a Filing Status</string>
+    <string name="step4">Step 4: File Your Taxes</string>
+    <string name="step5">Step 5: Get Organized for Next Year</string>
 
     //Spinner array
     <string-array name="provinces">

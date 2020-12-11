@@ -8,10 +8,16 @@
     tools:context=".helperfragments.ViewPagerFragment">
 
     <TextView
-        android:id="@+id/viewpagerTextView"
+        android:id="@+id/viewpagerSteps"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="215dp"
         android:text="@string/menu_viewPager"
         android:textAlignment="center"
         android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/viewpagerDesc"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        android:text="TextView" />
 </LinearLayout>
