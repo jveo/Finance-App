@@ -108,10 +108,10 @@ public class EmiCalculatorFragment extends Fragment {
                 double totalInterestResult1 = loan*(interest/100);
                 double emiResult1 = Math.round((loan + totalInterestResult1) / term);
 
-                loanAmountResult.setText(loanAmountEditText.getText());
-                emiResult.setText(String.valueOf(emiResult1));
-                totalInterestResult.setText(String.valueOf(totalInterestResult1));
-                termResult.setText(String.valueOf(term));
+                loanAmountResult.setText("$" + loanAmountEditText.getText());
+                emiResult.setText("$" + String.valueOf((int)emiResult1));
+                totalInterestResult.setText("$" + String.valueOf((int)totalInterestResult1));
+                termResult.setText(String.valueOf(term) + " months");
             }
         });
 

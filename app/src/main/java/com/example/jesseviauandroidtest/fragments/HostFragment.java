@@ -86,10 +86,12 @@ public class HostFragment extends Fragment {
             switch (position){
                 case 0: return ViewPagerFragment.newInstance("Step 1: Gather Your Tax Documents", "Here are a few things you need:\n" +
                         "\n" +
-                        " - W-2s\n" +
-                        " - 1099s\n" +
-                        " - Mortgage interest statements\n" +
-                        " - Investment income statements", R.drawable.man1);
+                        " - T4 slips\n" +
+                        " - Tuition Receipts\n" +
+                        " - Employment Insurance Benefits\n" +
+                        " - CPP\n" +
+                        " - Workers Compensation benefits\n" +
+                        " - All other Information slips", R.drawable.man1);
                 case 1: return ViewPagerFragment.newInstance("Step 2: Choose Between the Standard Deduction or Itemizing", "you have two choices: Take the standard deduction or itemize your deductions.\n If you do plan on itemizing deductions, you’ll need proof to back up your claims. So, don’t forget any receipts for deductions and tax credits like:\n" +
                         "\n" +
                         " - Childcare\n" +
