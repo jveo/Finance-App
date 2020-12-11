@@ -20,9 +20,10 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_emi">Equated monthly installment</string>
 
-    //BUTTON TEXT
+    //Calculators
     <string name="incomeTax_calc">Income Tax Calculator</string>
     <string name="Emi_calc">EMI Calculator</string>
+    <string name="calculate">Calculate</string>
 
     //input field text
     <string name="Salary">Salary</string>

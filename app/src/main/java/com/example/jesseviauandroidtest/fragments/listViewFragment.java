@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.jesseviauandroidtest.MainActivity;
 import com.example.jesseviauandroidtest.R;
 import com.example.jesseviauandroidtest.pojo.listViewItem;
 
@@ -76,7 +77,7 @@ public class listViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_view, container, false);
 
-
+        MainActivity.fab.show();
 
         final ListView listView = view.findViewById(R.id.faqList);
         answer = view.findViewById(R.id.description);

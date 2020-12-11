@@ -1,6 +1,5 @@
 package com.example.jesseviauandroidtest.fragments;
 
-import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,13 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.jesseviauandroidtest.R;
-
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,12 +54,17 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
         return fragment;
     }
 
-    int salary, tax;
-    double taxPercent;
+    int salary;
+
+    double federalTax;
+    double provincialTax;
+
+
 
     EditText salaryInput;
     TextView resultOutput;
-    TextView taxPercentOutput;
+    TextView estimatedFedTaxOutput;
+    TextView estimatedProvTaxOutput;
     Button button;
 
     @Override
@@ -95,8 +94,9 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
         spinnerProvince.setOnItemSelectedListener(this);
 
         salaryInput = (EditText) view.findViewById(R.id.salaryInput);
+        estimatedFedTaxOutput = (TextView) view.findViewById(R.id.estimatedFedTax);
+        estimatedProvTaxOutput = (TextView) view.findViewById(R.id.estimatedProvTax);
         resultOutput = (TextView) view.findViewById(R.id.resultTextView);
-        taxPercentOutput = (TextView) view.findViewById(R.id.taxPercent);
         button = (Button) view.findViewById(R.id.calculateButton);
 
 
@@ -104,16 +104,29 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //FEDERAL TAX
+                if(salary <= 48535){
+                    federalTax = 0.15;
+                }
+                if(salary > 48535 && salary <= 97069){
+                    federalTax = 0.2050;
+                }
+                if(salary > 97069 && salary <= 150473){
+                    federalTax = 0.26;
+                }
+                if(salary > 150474 && salary <= 214368){
+                    federalTax = 0.29;
+                }
+                if(salary > 214368){
+                    federalTax = 0.33;
+                }
+
                 salary = Integer.parseInt(salaryInput.getText().toString());
-                double fedTaxEstimate = salary*0.103;
-                double provTaxEstimate = salary*0.053;
-                double cppDeductions = salary*0.052;
-                double eiDeductions = salary*0.015;
-                double Total_Deductions = fedTaxEstimate+provTaxEstimate+cppDeductions+eiDeductions;
-
-
-                double result = salary - (Total_Deductions);
-                resultOutput.setText(String.valueOf(result));
+                double result = Math.round(salary - (salary*(federalTax+provincialTax)));
+                estimatedFedTaxOutput.setText(String.valueOf(federalTax) + "%");
+                estimatedProvTaxOutput.setText(String.valueOf(provincialTax) + "%");
+                resultOutput.setText("$" + String.valueOf(result));
 
             }
         });
@@ -128,41 +141,166 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
 
             case 0:
                 //ontario
-                taxPercent = 0.13;
-                taxPercentOutput.setText(String.valueOf(taxPercent*100) + "%");
+                if(salary <= 44740){
+                    provincialTax = 0.0505;
+                }
+                if(salary > 44740 && salary <= 89482){
+                    provincialTax = 0.0915;
+                }
+                if(salary > 89482 && salary <= 150000){
+                    provincialTax = 0.1116;
+                }
+                if(salary > 150000 && salary <= 220000){
+                    provincialTax = 0.1216;
+                }
+                if(salary > 220000){
+                    provincialTax = 0.1316;
+                }
                 break;
             case 1:
                 //Quebec
-                taxPercent = 0.14975;
-                taxPercentOutput.setText(String.valueOf(taxPercent*100) + "%");
+                if(salary <= 44545){
+                    provincialTax = 0.15;
+                }
+                if(salary > 44545 && salary <= 89080){
+                    provincialTax = 0.20;
+                }
+                if(salary > 89080 && salary <= 108390){
+                    provincialTax = 0.24;
+                }
+                if(salary > 108390){
+                    provincialTax = 0.2575;
+                }
                 break;
             case 2:
-            case 3:
-            case 9:
                 //Nova Scotia"
+                if(salary <= 29590){
+                    provincialTax = 0.0879;
+                }
+                if(salary > 29590 && salary <= 59180){
+                    provincialTax = 0.1495;
+                }
+                if(salary > 59180 && salary <= 93000){
+                    provincialTax = 0.1667;
+                }
+                if(salary > 93000 && salary <= 150000){
+                    provincialTax = 0.1750;
+                }
+                if(salary > 150000){
+                    provincialTax = 0.21;
+                }
+                break;
+            case 3:
                 //New Brunswick
-                //N & L [9]
-                taxPercent = 0.15;
-                taxPercentOutput.setText(String.valueOf(taxPercent*100) + "%");
+                if(salary <= 43401){
+                    provincialTax = 0.0968;
+                }
+                if(salary > 43401 && salary <= 86803){
+                    provincialTax = 0.1482;
+                }
+                if(salary > 86803 && salary <= 141122){
+                    provincialTax = 0.1652;
+                }
+                if(salary > 141122 && salary <= 160776){
+                    provincialTax = 0.1784;
+                }
+                if(salary > 160776){
+                    provincialTax = 0.2030;
+                }
                 break;
             case 4:
-            case 5:
-            case 6:
                 //Manitoba
+                if(salary <= 33389){
+                    provincialTax = 0.1080;
+                }
+                if(salary > 33389 && salary <= 72165){
+                    provincialTax = 0.1275;
+                }
+                if(salary > 72165){
+                    provincialTax = 0.1740;
+                }
+
+                break;
+            case 5:
                 //British Columbia
+                if(salary <= 41725){
+                    provincialTax = 0.0506;
+                }
+                if(salary > 41725 && salary <= 83451){
+                    provincialTax = 0.770;
+                }
+                if(salary > 83451 && salary <= 95812){
+                    provincialTax = 0.1050;
+                }
+                if(salary > 95812 && salary <= 116344){
+                    provincialTax = 0.1229;
+                }
+                if(salary > 116344 && salary <= 157748){
+                    provincialTax = 0.1470;
+                }
+                if(salary > 157748){
+                    provincialTax = 0.1680;
+                }
+                break;
+            case 6:
                 //P.E.I
-                taxPercent = 0.12;
-                taxPercentOutput.setText(String.valueOf(taxPercent*100) + "%");
+                if(salary <= 31984){
+                    provincialTax = 0.0980;
+                }
+                if(salary > 31984 && salary <= 63969){
+                    provincialTax = 0.1380;
+                }
+                if(salary > 63969){
+                    provincialTax = 0.1670;
+                }
                 break;
             case 7:
                 //Saskatchewan
-                taxPercent = 0.11;
-                taxPercentOutput.setText(String.valueOf(taxPercent*100) + "%");
+                if(salary <= 45225){
+                    provincialTax = 0.1050;
+                }
+                if(salary > 45225 && salary <= 129214){
+                    provincialTax = 0.1250;
+                }
+                if(salary > 129214){
+                    provincialTax = 0.1450;
+                }
                 break;
             case 8:
                 //Alberta
-                taxPercent = 0.05;
-                taxPercentOutput.setText(String.valueOf(taxPercent*100) + "%");
+                if(salary <= 131220){
+                    provincialTax = 0.10;
+                }
+                if(salary > 131220 && salary <= 157464){
+                    provincialTax = 0.12;
+                }
+                if(salary > 157464 && salary <= 209952){
+                    provincialTax = 0.13;
+                }
+                if(salary > 209952 && salary <= 314928){
+                    provincialTax = 0.14;
+                }
+                if(salary > 314928){
+                    provincialTax = 0.15;
+                }
+                break;
+            case 9:
+                //N & L
+                if(salary <= 37929){
+                    provincialTax = 0.0870;
+                }
+                if(salary > 37929 && salary <= 75858){
+                    provincialTax = 0.1450;
+                }
+                if(salary > 75858 && salary <= 135432){
+                    provincialTax = 0.1580;
+                }
+                if(salary > 135432 && salary <= 189604){
+                    provincialTax = 0.1730;
+                }
+                if(salary > 189604){
+                    provincialTax = 0.1830;
+                }
                 break;
         }
 
@@ -174,27 +312,6 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
 
     }
 
-    public double takeHomePayCalc(double salary, double taxPercent){
 
-        double fedTax = 0;
-        if( salary >= 48535){
-            fedTax = (0.15*salary);
-            if(salary > 48535 && salary <= 97069){
-                fedTax = (0.20*salary);
-            }
-                if(salary > 97069 && salary <= 150473){
-                    fedTax += (0.26*salary);
-                }
-                    if(salary > 150473 && salary <= 214368){
-                        fedTax += (0.29*salary);
-                    }
-                        if(salary >= 214368){
-                            fedTax += (0.33*salary);
-                        }
-        } else {
-            return  salary * 0.13;
-        }
 
-        return salary - (fedTax + taxPercent);
-    }
 }

@@ -50,9 +50,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:background="#038EEC"
+        android:background="@color/colorPrimary"
         android:text="@string/madeBy"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
 
 
 </RelativeLayout>

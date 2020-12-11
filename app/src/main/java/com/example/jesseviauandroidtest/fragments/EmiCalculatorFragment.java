@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.jesseviauandroidtest.R;
 
@@ -48,6 +51,22 @@ public class EmiCalculatorFragment extends Fragment {
         return fragment;
     }
 
+
+    int salary, tax;
+    double taxPercent;
+
+
+    TextView loanAmountResult;
+    TextView emiResult;
+    TextView totalInterestResult;
+    TextView termResult;
+    TextView totalPaymentResult;
+
+    EditText loanAmountEditText;
+    EditText InterestRateEditText;
+    EditText LoanTermEditText;
+    Button emiCalculateButton;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +81,22 @@ public class EmiCalculatorFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_emi_calculator, container, false);
+
+
+        //User Inputs
+        loanAmountEditText = (EditText) view.findViewById(R.id.loanAmountEditText);
+        InterestRateEditText = (EditText) view.findViewById(R.id.InterestRateEditText);
+        LoanTermEditText = (EditText) view.findViewById(R.id.LoanTermEditText);
+
+
+        //Result Outputs
+        loanAmountResult = (TextView) view.findViewById(R.id.LoanAmountResult);
+        emiResult = (TextView) view.findViewById(R.id.emiResult);
+        totalInterestResult = (TextView) view.findViewById(R.id.totalInterestResult);
+        termResult = (TextView) view.findViewById(R.id.termResult);
+        totalPaymentResult = (TextView) view.findViewById(R.id.totalPaymentResult);
+
+
 
 
 

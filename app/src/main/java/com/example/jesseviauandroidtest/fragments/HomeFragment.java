@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
-        MainActivity.fab.hide();
+        MainActivity.fab.show();
 
 
         final FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
