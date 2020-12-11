@@ -37,7 +37,7 @@
 
     //PERSONAL INFORMATION
     <string name="name">Jesse Viau</string>
-    <string name="email">info@Financial.edu</string>
+    <string name="email">info@FinancialEd.ca</string>
     <string name="phoneButton">PHONE</string>
     <string name="emailButton">EMAIL</string>
     <string name="textButton">TEXT</string>
