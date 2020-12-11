@@ -25,7 +25,7 @@
     <string name="Emi_calc">EMI Calculator</string>
 
     //input field text
-    <string name="incomeTax_year">Tax Year</string>
+    <string name="Salary">Salary</string>
     <string name="incomeTax_input">Your Income</string>
 
     //CONTACT PAGE
@@ -42,6 +42,20 @@
     <string name="emailButton">EMAIL</string>
     <string name="textButton">TEXT</string>
     <string name="locationButton">LOCATION</string>
+
+    //Spinner array
+    <string-array name="provinces">
+        <item>Ontario</item>
+        <item>Quebec</item>
+        <item>Nova Scotia</item>
+        <item>New Brunswick</item>
+        <item>Manitoba</item>
+        <item>British Columbia</item>
+        <item>P.E.I</item>
+        <item>Saskatchewan</item>
+        <item>Alberta</item>
+        <item>N &amp; L</item>
+    </string-array>
 
     //FAQ QUESTIONS
     <string name="faq0">What’s a Credit Score?</string>
@@ -67,4 +81,5 @@
     <string name="emi_calculate">This image was used from <a href="https://www.cashry.com/blog/wp-content/uploads/2019/07/monthly-installment-payday-loans-1.jpg">Here</a></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
