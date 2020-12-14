@@ -101,32 +101,32 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
         button = (Button) view.findViewById(R.id.calculateButton);
 
 
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //FEDERAL TAX
-                if(salary <= 48535){
-                    federalTax = 0.15;
-                }
-                if(salary > 48535 && salary <= 97069){
-                    federalTax = 0.2050;
-                }
-                if(salary > 97069 && salary <= 150473){
-                    federalTax = 0.26;
-                }
-                if(salary > 150474 && salary <= 214368){
-                    federalTax = 0.29;
-                }
-                if(salary > 214368){
-                    federalTax = 0.33;
-                }
-
                 salary = Integer.parseInt(salaryInput.getText().toString());
+
+                //FEDERAL TAX
+                    if(salary <= 48535){
+                        federalTax = 0.15;
+                    }
+                    if(salary > 48535 && salary <= 97069){
+                        federalTax = 0.2050;
+                    }
+                    if(salary > 97069 && salary <= 150473){
+                        federalTax = 0.26;
+                    }
+                    if(salary > 150474 && salary <= 214368){
+                        federalTax = 0.29;
+                    }
+                    if(salary > 214368){
+                        federalTax = 0.33;
+                    }
+
                 double result = Math.round(salary - (salary*(federalTax+provincialTax)));
-                estimatedFedTaxOutput.setText(String.valueOf(federalTax*100) + "%");
-                estimatedProvTaxOutput.setText(String.valueOf(provincialTax*100) + "%");
+                estimatedFedTaxOutput.setText(String.valueOf(Math.round(federalTax*100)) + "%");
+                estimatedProvTaxOutput.setText(String.valueOf(Math.round(provincialTax*100)) + "%");
                 resultOutput.setText("$" + String.valueOf(result));
 
             }
