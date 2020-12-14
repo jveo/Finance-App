@@ -125,8 +125,8 @@ public class IncomeTaxCalculatorFragment extends Fragment implements AdapterView
 
                 salary = Integer.parseInt(salaryInput.getText().toString());
                 double result = Math.round(salary - (salary*(federalTax+provincialTax)));
-                estimatedFedTaxOutput.setText(String.valueOf(federalTax) + "%");
-                estimatedProvTaxOutput.setText(String.valueOf(provincialTax) + "%");
+                estimatedFedTaxOutput.setText(String.valueOf(federalTax*100) + "%");
+                estimatedProvTaxOutput.setText(String.valueOf(provincialTax*100) + "%");
                 resultOutput.setText("$" + String.valueOf(result));
 
             }
